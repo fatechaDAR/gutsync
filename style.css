@@ -333,3 +333,51 @@ footer {
     padding: 20px;
     font-size: 0.9rem;
 }
+
+/* =========================================
+   MEDIA QUERY UNTUK TAMPILAN HP (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Mengatur Header & Navigasi agar menumpuk ke bawah */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Memperkecil teks di Hero Section agar tidak kebesaran */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: column; /* Tombol jadi atas-bawah */
+        gap: 10px;
+    }
+
+    /* Mengubah kotak Visi Misi, Fitur, Produk, dan Testimoni jadi 100% (penuh seukuran layar HP) */
+    .vision-mission {
+        flex-direction: column;
+    }
+    .vm-box, .feature-box, .product-card, .testi-box {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    /* Menyesuaikan jarak padding agar tidak terlalu lebar di HP */
+    .about, .features, .products, .testimonials, .contact {
+        padding: 50px 20px;
+    }
+
+    /* Menyesuaikan ukuran teks judul Section */
+    h2 {
+        font-size: 1.8rem;
+    }
+}
